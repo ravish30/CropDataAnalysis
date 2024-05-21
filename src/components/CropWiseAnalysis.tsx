@@ -25,10 +25,10 @@ const YearlyAnalysis = () => {
                 let totalCultivationArea: number = 0;
                 for (const crop of crops) {
                   const cropYield = typeof crop["Yield Of Crops (UOM:Kg/Ha(KilogramperHectare))"] === 'number'
-                    ? crop['Crop Production (UOM:t(Tonnes))'] as number
+                    ? crop["Yield Of Crops (UOM:Kg/Ha(KilogramperHectare))"] as number
                     : 0;
                   const cultivationArea = typeof crop["Area Under Cultivation (UOM:Ha(Hectares))"] === 'number'
-                    ? crop['Crop Production (UOM:t(Tonnes))'] as number
+                    ? crop["Area Under Cultivation (UOM:Ha(Hectares))"] as number
                     : 0;
                    totalYield += cropYield
                    totalCultivationArea += cultivationArea
